@@ -9,15 +9,14 @@ export default function Login(params) {
     const password = useRef('')
     
     const user = JSON.parse(localStorage.getItem("user"))
-    
-    
+
     const signIn = (e) => {
         e.preventDefault()
 
         if (user !== null) {
             password = password.current.value
             email = email.current.value
-            
+
             if(email !== '' || password !== '' || user.email === email && user.password === password) {
                 navigate('/')
               

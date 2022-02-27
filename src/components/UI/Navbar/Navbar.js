@@ -25,8 +25,7 @@ export default function Navbar(props) {
                     {
                         user && <li onClick={logOut} className={`${classes["btn-logout"]}`}>Logout</li>
                     }
-                    
-                    
+                       
                 </ul>
             </div>
         </nav>

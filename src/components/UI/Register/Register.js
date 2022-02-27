@@ -11,7 +11,6 @@ export default function Register(params) {
     const password = useRef('')
     const passwordConfirm = useRef('')
 
-    
     // console.log(user);
     
     const signUp = (e) => {
@@ -29,7 +28,7 @@ export default function Register(params) {
             })
 
             localStorage.setItem('user', user)
-            
+
             navigate('/')
 
         } else {
