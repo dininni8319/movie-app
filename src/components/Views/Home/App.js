@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import Navbar from './components/UI/Navbar/Navbar';
-import Header from './components/UI/Header/Header';
+import Header from './../../UI/Header/Header';
 
 function App() {
 
@@ -21,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+
       <Header />
       <div className='container-cards'>
         {

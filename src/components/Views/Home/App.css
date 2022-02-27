@@ -19,8 +19,10 @@ body {
   color: white;
 }
 
-li {
+li, a {
   list-style-type: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 input {

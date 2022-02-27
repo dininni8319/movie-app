@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,16 +8,19 @@ import {
 } from 'react-router-dom';
 
 import './index.css';
-import App from './App';
-import LoginRegister from './components/Views/LoginRegister/LoginRegister';
+import App from './components/Views/Home/App';
+import Navbar from './components/UI/Navbar/Navbar';
+import Sign from './components/Views/Sign/Sign';
 
 
 render(
   <React.StrictMode>
     <Router>
+    <Navbar />
     <Routes>
+    
       <Route path='/' element={<App />} />
-      <Route path='/login-register' element={<LoginRegister />} />
+      <Route path='/sign' element={<Sign />} />
     </Routes>
     </Router>
   </React.StrictMode>,
