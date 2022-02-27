@@ -12,6 +12,7 @@ import './index.css';
 import App from './components/Views/Home/App';
 import Navbar from './components/UI/Navbar/Navbar';
 import Sign from './components/Views/Sign/Sign';
+import MovieDetail from './components/Views/MovieDetail/MovieDetail';
 
 render(
   <React.StrictMode>
@@ -22,7 +23,14 @@ render(
         <ProtectedRoute >
           <App />
         </ProtectedRoute>
+        
+      } />
 
+      <Route path='/movie/:slug' element={
+        <ProtectedRoute >
+          <MovieDetail />
+        </ProtectedRoute>
+        
       } />
       <Route path='/sign' element={<Sign />} />
     </Routes>

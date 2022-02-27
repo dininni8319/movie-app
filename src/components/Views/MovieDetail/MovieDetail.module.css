@@ -1,0 +1,13 @@
+
+.container-movie-detail {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.movie-detail-img {
+  min-width: 50%;
+  min-height: 50%;
+  padding-bottom: 20px;
+}

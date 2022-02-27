@@ -1,10 +1,13 @@
 import classes from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router';
+import { useState } from 'react';
 
 export default function Navbar(props) {
+    // const [isScrolled, setIsScrolled ] = useState(false)
+     
     const user = JSON.parse(localStorage.getItem('user'))
-
+       
     const navigate = useNavigate()
 
     const logOut = () => {
@@ -14,7 +17,7 @@ export default function Navbar(props) {
 
     return (
 
-        <nav className={`${classes['container-navbar']}`}>
+        <nav className={`${ classes['container-navbar']}`}>
             <div className={`${classes['row-navbar']}`}>
                 <ul className={`${classes['ul-navbar']}`}>
                     <li className={`${classes.title}`}><Link to='/'>MovieMax</Link></li>

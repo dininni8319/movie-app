@@ -1,17 +1,35 @@
-import { useState, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import Header from './../../UI/Header/Header';
 import Card from '../../UI/Card/Card';
 
 function App() {
-
+  
   const api_url = {
     secret: process.env.REACT_APP_MOVIES_SECRET,
     movies: process.env.REACT_APP_MOVIES_API_URL
   }
   
   const [ movies, setMovies] = useState(null)
+  // const scrolled = useRef(0);
 
+  // console.log(scrolled.current, 'test');
+  // useEffect(() => {
+  //   const nav = document.querySelector('nav')
+  //   nav.style.background = 'black'
+
+  // }, [])
+  
+
+  // const handleScroll = () => {
+    
+  //   if(scrolled.current) {
+     
+  //     // if (scrollTop > 30) {
+  //     // }
+  //   }
+  // }
+  
   useEffect(() => {
     fetch(`${api_url.movies}${api_url.secret}`)
       .then(response => response.json())
