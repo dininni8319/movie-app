@@ -12,6 +12,8 @@
 }
 .title {
     color: #FF0000;
+    font-size:xx-large;
+    font-weight: bolder;
 }
 .ul-navbar {
     height: 100%;
@@ -20,5 +22,13 @@
     align-items: center;
     font-size: 20px;
     font-weight: bold;
+}
+
+.btn-logout {
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline:none;
 }
 

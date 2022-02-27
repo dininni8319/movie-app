@@ -3,17 +3,16 @@
     min-height: 25vh;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(rgba(34, 34, 34, 0.972) 5%, rgba(55, 53, 124, 0.2), #222 95%);
+    z-index: 1;
 }
 
 .video {
     top: 50%;
     left: 50%;
     min-width: 100%;
-    /* min-height: 50%; */
-    /* position: absolute; */
     width: auto;
     height: auto;
-    opacity: 0.5;
 }
 
 .overlay {
@@ -23,5 +22,4 @@
     width: 100%;
     height: 100%;
     opacity: 0.5;
-   
 }

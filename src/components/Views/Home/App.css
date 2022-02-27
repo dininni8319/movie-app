@@ -10,7 +10,6 @@
   padding: 0;
 }
 
-
 body {
   font-family: 'Roboto Condensed', sans-serif;
   background-color: #282c34;
@@ -23,10 +22,14 @@ li, a {
   list-style-type: none;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 input {
   outline: none;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 10px;
 }
 
 button {
@@ -43,12 +46,9 @@ button {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  /* background: linear-gradient(0deg, rgba(0,0, 0,0.383820564516129) 14%, rgba(0,0,0,0.3) 39%) , url('./../../assets/Images/background-img.jpeg');
+  background-size: cover;
+  background-position: center, center, center; */
+  /* z-index: 1; */
 }
 
-.movies-card {
-  width: 90%;
-  height: 300px;
-  border: 1px solid white;
-  margin: 20px;
-
-}

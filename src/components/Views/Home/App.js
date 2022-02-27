@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Header from './../../UI/Header/Header';
+import Card from '../../UI/Card/Card';
 
 function App() {
 
@@ -9,7 +10,6 @@ function App() {
     movies: process.env.REACT_APP_MOVIES_API_URL
   }
   
-  // console.log(api_url);
   const [ movies, setMovies] = useState(null)
 
   useEffect(() => {
@@ -19,29 +19,13 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+      <div className="App">
 
-      <Header />
-      <div className='container-cards'>
-        {
-          movies && movies.map(el => {
-            return (
-                     <div key={el.id} className='movies-card'>
-                          <img src={el.backdrop_path} alt="" />
-                          <h3>{el.original_title}</h3>
-                          <p>{el.overview.slice(0, 20)}</p>
-                           <ul>
-                             <li>{el.popularity}</li>
-                             <li>{el.release_date}</li>
-                             <li>{el.vote_average}</li>
-                             <li>{el.original_language}</li>
-                           </ul>
-                      </div>
-                )
-              })   
-            }
+        <Header />
+        <Card 
+          movies={movies}
+        />
       </div>
-    </div>
   );
 }
 
