@@ -1,0 +1,24 @@
+.container-navbar {
+    width: 100vw;
+    min-height: 10vh;
+    background-color: transparent;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+}
+
+.row-navbar {
+    width: 100%;
+}
+.title {
+    color: #FF0000;
+}
+.ul-navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
