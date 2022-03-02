@@ -32,7 +32,7 @@ export default function Login(params) {
     return (
         <form onSubmit={signIn}>
             <div className={`${classes.title}`}>
-                <h2>Login</h2>
+                <h1>Login</h1>
             </div>
             <div className={`${classes['input-sign']}`}>
                 <label htmlFor="userEmail">Email</label>

@@ -36,7 +36,7 @@ export default function Register(params) {
     return (
         <form onSubmit={signUp}>
             <div className={`${classes.title}`}>
-                <h2>Register</h2>
+                <h1>Register</h1>
             </div>
             <div className={`${classes['input-sign']}`}>
                 <label htmlFor="username" className={`#`}>Username</label>

@@ -25,6 +25,9 @@ li, a {
   cursor: pointer;
 }
 
+li {
+  color: goldenrod;
+}
 input {
   outline: none;
   border: none;
@@ -47,6 +50,7 @@ h2 {
   color: rgb(243, 134, 9);
   padding: 10px 20px;
 }
+
 .container-cards {
   margin: 0;
   padding: 0;

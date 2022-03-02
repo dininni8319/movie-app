@@ -11,8 +11,6 @@ export function MovieProvider(props) {
     const [ tvShows, setTvShows ] = useState([])
     const [ popular, setPopular ] = useState([])
     const [ topRated, setTopRated ] = useState([])
-      
-    console.log(tvShows);
     
     useEffect(() => {
         fetch(`${api_url.movies}${api_url.secret}`)

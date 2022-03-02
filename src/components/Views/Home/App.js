@@ -10,7 +10,7 @@ function App() {
   const { api_url } = useContext(ConfigContext)
   
   const { currentMovie, upComingMovie, tvShows , popular, topRated } = useContext(MovieContext)
-  console.log(tvShows, 'tv shows');
+
   return (
       <div className="App">
 
