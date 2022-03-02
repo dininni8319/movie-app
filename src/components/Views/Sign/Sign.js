@@ -4,6 +4,7 @@ import Register from '../../UI/Register/Register';
 import classes from './Sign.module.css';
 
 export default function Sign(params) {
+    
     const [isLogin, setIsLogin ] = useState(true)
 
     return (

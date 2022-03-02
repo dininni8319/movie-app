@@ -10,8 +10,6 @@ export default function Register(params) {
     const email = useRef('')
     const password = useRef('')
     const passwordConfirm = useRef('')
-
-    // console.log(user);
     
     const signUp = (e) => {
         e.preventDefault()

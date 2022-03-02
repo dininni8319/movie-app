@@ -3,7 +3,9 @@ import { useParams } from 'react-router'
 import classes from './MovieDetail.module.css';
 
 export default function MovieDetail(){
+
     const [movieDetail, setMovieDetail] = useState(null)
+
     const api_url = {
         secret: process.env.REACT_APP_MOVIES_SECRET,
         movies: process.env.REACT_APP_MOVIES_API_URL
@@ -11,12 +13,12 @@ export default function MovieDetail(){
 
     const { slug } = useParams()
 
-
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${slug}?api_key=${api_url.secret}&language=en-US`)
         .then(response => response.json())
         .then(data => setMovieDetail(data))
     })
+    
     return (
          <div className={`${classes['container-movie-detail']}`}> 
              {
