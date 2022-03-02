@@ -41,11 +41,17 @@ button {
   font-size: 30px;
 }
 
+h2 {
+  text-align: start;
+  font-weight: bolder;
+  color: rgb(243, 134, 9);
+  padding: 10px 20px;
+}
 .container-cards {
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  overflow-x: scroll;
   /* background: linear-gradient(0deg, rgba(0,0, 0,0.383820564516129) 14%, rgba(0,0,0,0.3) 39%) , url('./../../assets/Images/background-img.jpeg');
   background-size: cover;
   background-position: center, center, center; */

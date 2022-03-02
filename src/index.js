@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { ConfigProvider } from './Context/ConfigContext/ConfigContext';
+import { MovieProvider } from './Context/MovieContext/MovieContext';
 
 import {
   BrowserRouter as Router,
@@ -15,26 +17,34 @@ import Sign from './components/Views/Sign/Sign';
 import MovieDetail from './components/Views/MovieDetail/MovieDetail';
 
 render(
-  <React.StrictMode>
-    <Router>
-    <Navbar />
-    <Routes>
-      <Route path='/' element={
-        <ProtectedRoute >
-          <App />
-        </ProtectedRoute>
-        
-      } />
 
-      <Route path='/movie/:slug' element={
-        <ProtectedRoute >
-          <MovieDetail />
-        </ProtectedRoute>
+  <React.StrictMode>
+    <ConfigProvider>
+      <MovieProvider>
         
-      } />
-      <Route path='/sign' element={<Sign />} />
-    </Routes>
-    </Router>
+        <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={
+            <ProtectedRoute >
+              <App />
+            </ProtectedRoute>
+            
+          } />
+
+          <Route path='/movie/:slug' element={
+            <ProtectedRoute >
+              <MovieDetail />
+            </ProtectedRoute>
+            
+          } />
+          <Route path='/sign' element={<Sign />} />
+        </Routes>
+        </Router>
+
+      </MovieProvider>
+
+    </ConfigProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

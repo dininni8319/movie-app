@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router'
 import classes from './MovieDetail.module.css';
+import { ConfigContext } from './../../../Context/ConfigContext/ConfigContext';
 
 export default function MovieDetail(){
 
     const [movieDetail, setMovieDetail] = useState(null)
-
-    const api_url = {
-        secret: process.env.REACT_APP_MOVIES_SECRET,
-        movies: process.env.REACT_APP_MOVIES_API_URL
-    }
+   
+    const { api_url } = useContext(ConfigContext)
 
     const { slug } = useParams()
 
