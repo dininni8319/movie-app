@@ -72,5 +72,6 @@ h2 {
 
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: linear-gradient(0deg, rgba(0,0, 0,0.383820564516129) 14%, rgba(0,0,0,0.3) 39%);
+  opacity: 0.5;
 }

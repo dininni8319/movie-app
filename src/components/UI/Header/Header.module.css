@@ -3,7 +3,6 @@
     min-height: 25vh;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(34, 34, 34, 0.972) 5%, rgba(55, 53, 124, 0.2), #222 95%);
     z-index: 1;
 }
 
@@ -11,7 +10,7 @@
     top: 50%;
     left: 50%;
     min-width: 100%;
-    width: auto;
+
     height: auto;
 }
 
@@ -21,5 +20,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    background: linear-gradient(rgba(34, 34, 34, 0.972) 5%, rgba(55, 53, 124, 0.2), #222 95%);
+    /* opacity: 0.5; */
 }
+/* 
+@media screen and (max-width: 700px) {
+    .video {
+        
+   
+        /* width: 50%; */
+        /* width: auto;
+        height: auto; */
+/*    }*/
+/*} */

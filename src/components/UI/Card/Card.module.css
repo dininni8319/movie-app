@@ -30,8 +30,8 @@
 }
 .card-img:hover { 
     filter: blur(0px) brightness(60%);
-
 }
+
 .movies-card > a {
     position: absolute;
     top: 8rem;
@@ -49,6 +49,13 @@
 
 .movies-card:hover > a { 
     opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+    
+    .card-img {
+        width: 15rem
+    }
 }
 
 
