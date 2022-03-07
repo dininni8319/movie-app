@@ -25,6 +25,9 @@
     min-height: 200px;
 }
 
+.card-description {
+    text-align: center;
+}
 .card-img:hover { 
     filter: blur(0px) brightness(60%);
 

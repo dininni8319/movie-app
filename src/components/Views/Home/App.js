@@ -23,10 +23,10 @@ function App() {
         <Card 
           movies={upComingMovie}
         />
-        <h2>Tv Shows</h2>
+        {/* <h2>Tv Shows</h2>
         <Card 
           movies={tvShows}
-        />
+        /> */}
         <h2>Popular</h2>
         <Card 
           movies={popular}

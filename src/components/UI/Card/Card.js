@@ -13,7 +13,7 @@ export default function Card(props) {
                 <div key={el.id} className={`${classes['movies-card']}`}>
                     <img src={`https://image.tmdb.org/t/p/w300${el.backdrop_path}`} alt={el.original_title} className={`${classes['card-img']}`} />
                     <h3 className={`${classes['card-title']}`}>{el.original_title ? el.original_title.slice(0, 20) : el.overview.slice(0, 20)}</h3>
-                    <p>{el.overview.slice(0, 20)}</p>
+                    <p className={`${classes['card-description']}`}>{el.overview.slice(0, 20)}...</p>
                     <Link to={`/movie/${el.id}`} className={`${classes['link-detail-page']}`}>
                       <FontAwesomeIcon icon={faChevronRight} className={`fa-1x ${classes["chevron-right-icon"]}`} />  
                     </Link>

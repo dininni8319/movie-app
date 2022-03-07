@@ -26,74 +26,82 @@ export default function MovieDetail(){
     }, [])
 
     return (
-        <div className={`${classes['container-movie-detail']}`} style={{backgroundImage: `linear-gradient(rgba(33, 33, 33, 1), rgba(33, 33, 33, 0.8), rgba(33, 33, 33, 1)), url(https://image.tmdb.org/t/p/w500${ movieDetail ? movieDetail.backdrop_path : null})`,
-        backgroundSize: 'cover',
-        backbroudPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-  }} > 
+        <div className={`${classes['container-movie']}`} style={{backgroundImage: `linear-gradient(rgba(33, 33, 33, 1), rgba(33, 33, 33, 0.8), rgba(33, 33, 33, 1)), url(https://image.tmdb.org/t/p/w500${ movieDetail ? movieDetail.backdrop_path : null})`,
+           backgroundSize: 'cover',
+           backbroudPosition: 'center',
+           backgroundRepeat: 'no-repeat'
+        }}> 
              {
                 movieDetail ? (
-                    <>
-                        <div key={movieDetail.id} className={`${classes['row-movie-detail']}`} >
-                            <div className={`${classes['row-img']}`}>
-                                <div className={`${classes['img-section']}`}>
-                                   <img src={`https://image.tmdb.org/t/p/w500${movieDetail.backdrop_path}`} alt={movieDetail.original_title} className={`${classes['movie-detail-img']}`} />
-                                    <h1 className={`${classes['card-title']}`}>{movieDetail.original_title}</h1>
-                                </div>
-                                <div>
-                                    <p>{movieDetail.overview}</p>
-                                    <a href={movieDetail.homepage} target="_blank">{movieDetail.homepage}</a>
-                                </div>
+                    
+                <>
+                    <div className={`${classes['row-video']}`}> 
+                        
+                        <div className={`${classes['section-description']}`}>
+                            <h1 className={`${classes['movie-title']}`}>{movieDetail.original_title}</h1>
+                            <div className={`${classes['section-img-link-movie']}`}>
+                                <img src={`https://image.tmdb.org/t/p/w500${movieDetail.backdrop_path}`} alt={movieDetail.original_title} className={`${classes['movie-detail-img']}`} /> 
+                                <h3 className={`${classes['movie-details-title']}`}>Movie Website</h3>
+                                <a href={movieDetail.homepage} target="_blank">{movieDetail.homepage}</a>
                             </div>
-                                <div className={`${classes['row-description']}`}>
-                                    {
-                                        video && <iframe width="400" height="280" src={`https://youtube.com/embed/${video1.key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    }                           
-                                </div> 
+                            <p>{movieDetail.overview}</p>
                         </div>
-                        <div className={`${classes['row-info']}`}>
-
-                            <ul>
-                                {
-                                    movieDetail && movieDetail.genres.map(el => {
-                                        return (
-                                            <li key={el.id}>{el.name}</li>
-                                            )
-                                        })
-                                }
-                            </ul>
-                             <ul>
-                                {
-                                    movieDetail && movieDetail.spoken_languages.map(el => {
-                                        return (
-                                            <li key={el.id}>{el.name}</li>
-                                            )
-                                        })
-                                    }
-                            </ul>
-
-                            <ul>
-                                <li>{movieDetail.popularity}</li>
-                                <li>{movieDetail.budget}</li>
-                                <li>{movieDetail.original_language}</li>
-                                <li>{movieDetail.release_date}</li>
-                                <li></li>
-                            </ul>
-                            <ul>
-                                {
-                                    movieDetail && movieDetail.production_companies.map(el => {
-                                        return (
-                                            <li key={el.id}>{el.name}</li>
-                                            )
-                                        })
-                                    }
-                            </ul>
-                            
-                        </div>
-                    </>
+                        <div className={`${classes['row-video-frame']}`}>
+                            {
+                                video1 && <iframe className={`${classes['video-frame-detail-page']}`} src={`https://youtube.com/embed/${video1.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            }                           
+                        </div> 
+                    </div>
+                       
+                </>
+                
                 ) : <p> hello</p>
              
           }
-         </div>
+                <div className={`${classes['ul-section']}`}>
+                    
+                    <ul>
+                        <h3 className={`${classes['movie-details-title']}`}>Genres</h3>
+
+                        {
+                            movieDetail && movieDetail.genres.map(el => {
+                                return (
+                                    <li key={el.id}>{el.name}</li>
+                                    )
+                                })
+                        }
+                    </ul>
+                    <ul>
+                        <h3 className={`${classes['movie-details-title']}`}>Languages</h3>
+
+                        {
+                            movieDetail && movieDetail.spoken_languages.map(el => {
+                                return (
+                                    <li key={el.id}>{el.name}</li>
+                                    )
+                                })
+                            }
+                    </ul>
+
+                    <ul>
+                    <h3 className={`${classes['movie-details-title']}`}>Movie Info</h3>
+                        <li>{movieDetail ? movieDetail.popularity : null}</li>
+                        <li>{movieDetail ? movieDetail.budget : null}</li>
+                        <li>{movieDetail ? movieDetail.original_language : null}</li>
+                        <li>{movieDetail ? movieDetail.release_date : null}</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <h3 className={`${classes['movie-details-title']}`}>Productions</h3>
+                        {
+                            movieDetail && movieDetail.production_companies.map(el => {
+                                return (
+                                    <li key={el.id}>{el.name}</li>
+                                    )
+                                })
+                            }
+                    </ul>
+                </div>
+        </div>
     );
 }

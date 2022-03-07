@@ -55,10 +55,22 @@ h2 {
   margin: 0;
   padding: 0;
   display: flex;
+  overflow: scroll;
   overflow-x: scroll;
+  /* overflow-x: hidde; */
   /* background: linear-gradient(0deg, rgba(0,0, 0,0.383820564516129) 14%, rgba(0,0,0,0.3) 39%) , url('./../../assets/Images/background-img.jpeg');
   background-size: cover;
   background-position: center, center, center; */
   /* z-index: 1; */
 }
 
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  height: 5px;
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
