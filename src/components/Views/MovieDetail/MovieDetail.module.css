@@ -96,12 +96,12 @@ a {
     width: 95%;
   }
   .section-description { 
-     width: 95%;
-     order: 2;
+    width: 95%;
+    order: 2;
   }
   
   .ul-section {
-   display: none;
+    display: none;
 
   }
 

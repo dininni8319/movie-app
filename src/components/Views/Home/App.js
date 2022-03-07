@@ -15,7 +15,7 @@ function App() {
       <div className="App">
 
         <Header />
-        <h2>Now Played</h2>
+        <h2>Now Playing</h2>
         <Card 
           movies={currentMovie}
         />

@@ -25,10 +25,15 @@ export default function Navbar(props) {
                     {
                         user === null && <li><Link to='/sign'>Sign</Link></li>
                     }
+
+                    {
+                        user && <li><Link to='/search'className={`${classes['btn-logout']}`}>Search</Link></li>
+                    } 
+
                     {
                         user && <li onClick={logOut} className={`${classes["btn-logout"]}`}>Logout</li>
                     }
-                       
+
                 </ul>
             </div>
         </nav>

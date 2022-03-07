@@ -15,6 +15,7 @@ import App from './components/Views/Home/App';
 import Navbar from './components/UI/Navbar/Navbar';
 import Sign from './components/Views/Sign/Sign';
 import MovieDetail from './components/Views/MovieDetail/MovieDetail';
+import { Search } from './components/Views/Search/Search';
 
 render(
 
@@ -32,6 +33,12 @@ render(
             
           } />
 
+          <Route path='/search' element={
+            <ProtectedRoute >
+              <Search />
+            </ProtectedRoute>
+            
+          } />
           <Route path='/movie/:slug' element={
             <ProtectedRoute >
               <MovieDetail />
