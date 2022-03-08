@@ -18,3 +18,15 @@
     font-weight: bolder;
     margin-top: 10px;
 }
+
+.error-message {
+    font-size: medium;
+    color: #FF0000;
+}
+/* .valid-color {
+    border: 1px solid #DFF2BF;
+} */
+
+.input-red {
+    border: 1px solid #FFD2D2;
+}

@@ -1,6 +1,6 @@
 .search-page-container {
     box-sizing: border-box; 
-    padding: 55px 0 0 10px;
+    padding: 60px 0 0 10px;
     display: grid;
     grid-template-columns: 1fr 8fr;
     /* min-height: 100vh; */
@@ -37,8 +37,8 @@
 }
 
 .movies-card {
-    width: 40%;
-    height: 300px;
+    width: 30%;
+    height: 330px;
     margin: 20px;
     border-radius: 5px;
     box-shadow: 0px 5px 5px 0px;
@@ -47,7 +47,7 @@
 }
 
 .movies-card:hover {
-    width: 41%;
+    /* width: 31%; */
     border: 1px solid rgb(245, 220, 98);
     box-shadow: 0 5px 5px 0 rgb(245, 220, 98)
 }
@@ -61,7 +61,7 @@
 
 .card-img {
     width: 100%;
-    min-height: 200px;
+    height: 230px;
 }
 
 .card-description {
@@ -71,13 +71,13 @@
     filter: blur(0px) brightness(60%);
 }
 
-.movies-card > a {
+.link-detail-page{
     position: absolute;
     top: 9rem;
-    left: 8rem;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
+    left: 10rem;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
     border-radius: 50%;
     background-color: transparent;
     border: 4px solid green;
