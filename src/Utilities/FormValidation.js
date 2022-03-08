@@ -1,11 +1,5 @@
-// let passwordError = errorMessages.passwordRepeat
-// let passwordRepeatError = errorMessages.notValidPassword
-// let emailError = errorMessages.email
-// let emptyFormError = errorMessages.formFields
 
 import { useState } from 'react';
-
-
 
 //  checks if every input is empty 
 export function inputValidation(data) {

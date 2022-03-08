@@ -11,7 +11,7 @@ export default function Sign(params) {
         <div className={`${classes['container-sign']}`}>
             <div className={`${classes['row-sign']}`}>
                 {
-                    isLogin ? <Login /> : <Register />
+                    isLogin ? <Login /> : <Register setIsLogin={setIsLogin}/>
                 }
               <div className={`${classes['row-btn']}`}>
                 <button className={`${classes['btn-switch']}`} onClick={() => setIsLogin(!isLogin)}>

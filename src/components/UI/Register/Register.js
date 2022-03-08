@@ -3,7 +3,7 @@ import classes from './Register.module.css';
 import { useNavigate } from 'react-router';
 import { inputValidation, validEmail, passwordValidation, errorMessages } from './../../../Utilities/FormValidation'
 
-export default function Register(params) {
+export default function Register(props) {
     
     const [ error, setError ] = useState({})
     const navigate = useNavigate()
@@ -12,13 +12,11 @@ export default function Register(params) {
     const password = useRef('')
     const passwordConfirm = useRef('')
 
-    console.log( error);
     let passwordError = errorMessages.passwordRepeat
-    let passwordRepeatError = errorMessages.notValidPassword
+    // let passwordRepeatError = errorMessages.notValidPassword
     let emailError = errorMessages.email
     let emptyFormError = errorMessages.formFields
 
-    // console.log(passwordRepeatError, emailError, emptyFormError);
     const data = {
         username: username.current.value,
         email: email.current.value,
@@ -34,12 +32,18 @@ export default function Register(params) {
             if (validEmail(email.current.value)) {
             
                 if (password.current.value === passwordConfirm.current.value && passwordValidation(password.current.value)) {
-                
-                    const user = JSON.stringify({ data })
+                    
+                    const user = JSON.stringify({ 
+                        username: username.current.value,
+                        email: email.current.value,
+                        password: password.current.value,
+                        passwordConfirm: passwordConfirm.current.value
+                     })
         
                     localStorage.setItem('user', user)
-                    navigate('/')
                     
+                    props.setIsLogin(true)
+                    navigate('/sign')
                 } else {
                     setError({
                         ...error, 
@@ -62,6 +66,7 @@ export default function Register(params) {
         }
 
     }
+
     return (
         <form onSubmit={signUp}>
             <div className={`${classes.title}`}>
