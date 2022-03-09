@@ -6,6 +6,7 @@ import { inputValidation, validEmail, passwordValidation, errorMessages } from '
 export default function Register(props) {
     
     const [ error, setError ] = useState({})
+    // console.log(error);
     const navigate = useNavigate()
     const username = useRef('')
     const email = useRef('')
@@ -23,11 +24,17 @@ export default function Register(props) {
         password: password.current.value,
         passwordConfirm: passwordConfirm.current.value
     }
-
+    // console.log(data, inputValidation(data));
     const signUp = (e) => {
         e.preventDefault()
         
         if (inputValidation(data)) {
+            setError({
+                ...error, 
+                emptyFormError
+            })
+
+        } else {
 
             if (validEmail(email.current.value)) {
             
@@ -57,12 +64,6 @@ export default function Register(props) {
                         emailError
                     })
                 }
-        
-        } else {
-            setError({
-                ...error, 
-                emptyFormError
-            })
         }
 
     }

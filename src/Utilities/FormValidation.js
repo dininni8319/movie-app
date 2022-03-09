@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 //  checks if every input is empty 
 export function inputValidation(data) {
-    const invalid = Object.values(data).every(el => el !== '')
+    const invalid = Object.values(data).every(el => el === '')
     return invalid;
 }
 
